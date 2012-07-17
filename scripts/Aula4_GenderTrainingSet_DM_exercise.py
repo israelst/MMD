@@ -25,7 +25,7 @@ from scipy.stats import describe, rv_discrete
 from pylab import hist, movavg
 
 '''Specifying the path to the files'''
-datapath = "/home/renato/Documentos/Git/MMD/datasets/"
+datapath = "../datasets/GenderTrainingSet/"
 dataset1 = "GenderTrainingSet.csv"
 
 '''loading the dataset
