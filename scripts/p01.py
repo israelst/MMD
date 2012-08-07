@@ -33,3 +33,24 @@ print u"---------------------------"
 influenced_ranking = sorted(ranking(influenced_dict), reverse=True)
 for i in influenced_ranking[:10]:
     print i
+
+
+from collections import Counter
+
+visited = []
+c = Counter()
+def visit(node, c, influnces_dict):
+    c[node] += 1
+    visited.append(node)
+    if node in influnces_dict.keys():
+        for child in influnces_dict[node]:
+            if child not in visited:
+                visit(child, c, influnces_dict)
+
+for node in influnces_dict.keys():
+    paths.setdefault(node, [])
+    visit(node, c, influnces_dict)
+
+
+
+
