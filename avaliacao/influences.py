@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from collections import Counter
+from collections import Counter, defaultdict
 from outputty import Table
 
 
@@ -33,6 +33,12 @@ class Influences(object):
 
     def most_influenced(self, number):
         return self._rank_table(self._most('Influenced', number))
+
+    def influence_map(self):
+        result = defaultdict(list)
+        for influnce, influenced in self.table:
+            result[influnce].append(influenced)
+        return result
 
 def main():
     influences = Influences('../datasets/p01_Influences.csv')
