@@ -5,27 +5,43 @@ from collections import Counter
 from outputty import Table
 
 
-influence_table = Table()
-influence_table.read('csv', '../datasets/p01_Influences.csv')
-for row in influence_table:
-    row[0] = row[0].strip()
-    row[1] = row[1].strip()
+class Influences(object):
+    def __init__(self, filename):
+        self.table = Table()
+        self.table.read('csv', filename)
+        self._cleanup()
 
-influences = Counter()
-for person in influence_table['Influnces']:
-    influences[person] += 1
-influenced = Counter()
-for person in influence_table['Influenced']:
-    influenced[person] += 1
+    def _cleanup(self):
+        for row in self.table:
+            row[0] = row[0].strip()
+            row[1] = row[1].strip()
 
-table = Table(headers=['Rank', 'Person'])
-for person, rank in influences.most_common(10):
-    table.append((rank, person))
-print 'Top 10 influences:'
-print table
+    def _most(self, column, number):
+        counter = Counter()
+        for person in self.table[column]:
+            counter[person] += 1
+        return counter.most_common(number)
 
-table = Table(headers=['Rank', 'Person'])
-for person, rank in influenced.most_common(10):
-    table.append((rank, person))
-print 'Top 10 influenced:'
-print table
+    def _rank_table(self, data):
+        table = Table(headers=['Rank', 'Person'])
+        for person, rank in data:
+            table.append((rank, person))
+        return table
+
+    def most_influences(self, number):
+        return self._rank_table(self._most('Influnces', number))
+
+    def most_influenced(self, number):
+        return self._rank_table(self._most('Influenced', number))
+
+def main():
+    influences = Influences('../datasets/p01_Influences.csv')
+    most_influential = influences.most_influences(10)
+    most_influenced = influences.most_influenced(10)
+    print 'Top 10 influnces persons:'
+    print most_influential
+    print 'Top 10 influenced persons:'
+    print most_influenced
+
+if __name__ == '__main__':
+    main()
