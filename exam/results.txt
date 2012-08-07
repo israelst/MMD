@@ -1,0 +1,62 @@
+Top 10 influnces persons:
++------+-------------------------------+
+| Rank |             Person            |
++------+-------------------------------+
+|   44 | Georg Wilhelm Friedrich Hegel |
+|   42 |           Arthur Schopenhauer |
+|   33 |           Friedrich Nietzsche |
+|   30 |          William S. Burroughs |
+|   30 |                     Karl Marx |
+|   30 |                 Immanuel Kant |
+|   29 |              G. K. Chesterton |
+|   29 |                Baruch Spinoza |
+|   28 |                Samuel Beckett |
+|   27 |                   Franz Kafka |
++------+-------------------------------+
+Top 10 influenced persons:
++------+-------------------------------+
+| Rank |             Person            |
++------+-------------------------------+
+|   21 |           Friedrich Nietzsche |
+|   20 |              Martin Heidegger |
+|   19 |               Michel Foucault |
+|   18 |              Jean-Paul Sartre |
+|   17 |                  Stephen King |
+|   17 |                Gilles Deleuze |
+|   16 |              Bertrand Russell |
+|   16 | Georg Wilhelm Friedrich Hegel |
+|   16 |                 Immanuel Kant |
+|   15 |                  Albert Camus |
++------+-------------------------------+
+Total of persons: 3589
+Countries for top 10 influentials:
++-------------------------------+----------------------------------------------------------+
+|             Person            |                         Country                          |
++-------------------------------+----------------------------------------------------------+
+| Georg Wilhelm Friedrich Hegel |                         Germany, Kingdom of WÃ¼rttemberg |
+|           Arthur Schopenhauer |                                                   Poland |
+|           Friedrich Nietzsche |                                                  Prussia |
+|          William S. Burroughs |                                                     U.S. |
+|                     Karl Marx |                              Kingdom of Prussia, Germany |
+|                 Immanuel Kant |                                                  Prussia |
+|              G. K. Chesterton |                                                  England |
+|                Baruch Spinoza |                              Netherlands, Dutch Republic |
+|                Samuel Beckett | United Kingdom, Republic of Ireland, Republic of Ireland |
+|                   Franz Kafka |                          Austria-Hungary, Czech Republic |
++-------------------------------+----------------------------------------------------------+
+Main areas/descriptions for top 10 influentials:
++-------------------------------+-------------+
+|             Person            | Description |
++-------------------------------+-------------+
+| Georg Wilhelm Friedrich Hegel | philosopher |
+|           Arthur Schopenhauer | philosopher |
+|           Friedrich Nietzsche | philosopher |
+|          William S. Burroughs |      writer |
+|                     Karl Marx | philosopher |
+|                 Immanuel Kant | philosopher |
+|              G. K. Chesterton |      writer |
+|                Baruch Spinoza | philosopher |
+|                Samuel Beckett |      writer |
+|                   Franz Kafka |      writer |
++-------------------------------+-------------+
+
