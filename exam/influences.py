@@ -3,6 +3,7 @@
 
 from collections import Counter, defaultdict
 from outputty import Table
+from dbpedia import get_country_of_birth, get_short_description
 
 
 class Influences(object):
@@ -48,9 +49,27 @@ def main():
     print most_influential
     print 'Top 10 influenced persons:'
     print most_influenced
-    total = len(set(influences.table['Influnces'] + \
-                    influences.table['Influenced']))
-    print 'Total of persons:', total
+    persons = set(influences.table['Influnces'] + \
+                  influences.table['Influenced'])
+    print 'Total of persons:', len(persons)
+
+    country_table = Table(headers=['Person', 'Country'])
+    for rank, person in most_influential:
+        person = person.encode('utf-8')
+        birth_place = ', '.join(get_country_of_birth(person))
+        country_table.append([person, birth_place])
+    print 'Countries for top 10 influentials:'
+    print country_table
+    country_table.write('csv', 'country-table.csv')
+
+    description_table = Table(headers=['Person', 'Description'])
+    for rank, person in most_influential:
+        person = person.encode('utf-8')
+        description_table.append([person, get_short_description(person)])
+    print 'Main areas/descriptions for top 10 influentials:'
+    print description_table
+    description_table.write('csv', 'description-table.csv')
+
 
 if __name__ == '__main__':
     main()
