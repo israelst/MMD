@@ -48,6 +48,9 @@ def main():
     print most_influential
     print 'Top 10 influenced persons:'
     print most_influenced
+    total = len(set(influences.table['Influnces'] + \
+                    influences.table['Influenced']))
+    print 'Total of persons:', total
 
 if __name__ == '__main__':
     main()
