@@ -18,3 +18,18 @@ for line in lines:
     influnces, influenced = prepare_values(line)
     add(influnces_dict, influnces, influenced)
     add(influenced_dict, influenced, influnces)
+
+
+influnces_ranking = sorted(ranking(influnces_dict), reverse=True)
+print u"---------------------------"
+print u"  Maiores influenciadores"
+print u"---------------------------"
+for i in influnces_ranking[:10]:
+    print i
+
+print u"---------------------------"
+print u"    Mais influenciados"
+print u"---------------------------"
+influenced_ranking = sorted(ranking(influenced_dict), reverse=True)
+for i in influenced_ranking[:10]:
+    print i
